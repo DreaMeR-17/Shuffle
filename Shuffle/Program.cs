@@ -44,7 +44,7 @@ namespace Shuffle
 
             int arrayLenght = values.Count();
 
-            while (arrayLenght > 1)
+            for (int i = 0; arrayLenght > 0; i++)
             {
                 arrayLenght--;
 
