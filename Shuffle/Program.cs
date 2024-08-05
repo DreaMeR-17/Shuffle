@@ -9,16 +9,16 @@ namespace Shuffle
         {
             int[] values = new int[10];
 
-            values = GetValueForArrayElement(values);
+            GetValueForArrayElement(values);
             ShowArrayElements(values);
 
             Console.WriteLine();
 
-            values = Shuffle(values);
+            Shuffle(values);
             ShowArrayElements(values);
         }
 
-        static int[] GetValueForArrayElement(int[] values)
+        static void GetValueForArrayElement(int[] values)
         {
             int startValue = 0;
 
@@ -26,8 +26,6 @@ namespace Shuffle
             {
                 values[i] = startValue++;
             }
-
-            return values;
         }
 
         static void ShowArrayElements(int[] values)
@@ -38,7 +36,7 @@ namespace Shuffle
             }
         }
 
-        static int[] Shuffle(int[] values)
+        static void Shuffle(int[] values)
         {
             Random random = new Random();
 
@@ -53,8 +51,6 @@ namespace Shuffle
                 values[randomIndex] = values[arrayLenght];
                 values[arrayLenght] = temp;
             }
-
-            return values;
         }
     }
 }
